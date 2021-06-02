@@ -54,7 +54,7 @@ The justification for using the star-schema lies in the following benefits of st
 4. **Fast aggregations** – the simpler queries against a star schema can result in improved performance for aggregation operations.
 5. **Feeding cubes** – star schemas are used by all OLAP systems to build proprietary OLAP cubes efficiently; in fact, most major OLAP systems provide a ROLAP mode of operation which can use a star schema directly as a source without building a proprietary cube structure.
 
-![star schema](/images/Sparkify_Data_Schema.JPG "star schema database")
+![star schema](https://github.com/ikennanwosu/Data_Engineering_Nanodegree/blob/master/Project_1-Data-Modelling-with-Postgres/images/Sparkify_Data_Schema.JPG"star schema database")
 
 ## ETL Process
 ![etl process](/images/etl.JPG "ETL Process")
