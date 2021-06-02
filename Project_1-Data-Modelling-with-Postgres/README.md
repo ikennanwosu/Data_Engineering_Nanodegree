@@ -33,7 +33,7 @@ data/log_data/2018/11/2018-11-13-events.json
 
 Also below is an example of what the data in a log file, 2018-11-12-events.json, looks like.
 
-![log file](/images/log_file.JPG "2018-11-12-events.json")
+![log file](https://github.com/ikennanwosu/Data_Engineering_Nanodegree/blob/master/Project_1-Data-Modelling-with-Postgres/images/log_file.JPG)
 
 ## Project Files
 The project is sectioned into six files as described below;
@@ -57,7 +57,7 @@ The justification for using the star-schema lies in the following benefits of st
 ![star schema](https://github.com/ikennanwosu/Data_Engineering_Nanodegree/blob/master/Project_1-Data-Modelling-with-Postgres/images/Sparkify_Data_Schema.JPG)
 
 ## ETL Process
-![etl process](/images/etl.JPG "ETL Process")
+![etl process](https://github.com/ikennanwosu/Data_Engineering_Nanodegree/blob/master/Project_1-Data-Modelling-with-Postgres/images/etl.JPG)
 
 ETL (Extract, Transform, Load) is general process that takes raw data from one or more sources, extracts the information required for analysis, transforms the data into a format that can serve business needs, and loads the data to a data warehouse or final destination. This process is usually automated via an ETL pipeline.
 
@@ -80,4 +80,4 @@ The following SQL query gets the number of songs per year after 1993 from the `s
 
 `%sql SELECT count(songs.song_id), songs.year FROM songs WHERE songs.year>1993 GROUP BY songs.year ORDER BY songs.year`
 
-![sample_query](/images/sample_query.JPG "Example Query")
+![sample_query](https://github.com/ikennanwosu/Data_Engineering_Nanodegree/blob/master/Project_1-Data-Modelling-with-Postgres/images/sample_query.JPG)
