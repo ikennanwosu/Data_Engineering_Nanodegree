@@ -46,6 +46,7 @@ def process_log_file(cur, filepath):
 
     # convert timestamp column to datetime
     t = pd.to_datetime(df["ts"], unit="ms")
+    df["ts"] = t
     
     # insert time data records
     time_data = [t, t.dt.hour, t.dt.day, t.dt.week, t.dt.month, t.dt.year, t.dt.weekday]
@@ -60,7 +61,8 @@ def process_log_file(cur, filepath):
 
     # insert user records
     for i, row in user_df.iterrows():
-        cur.execute(user_table_insert, list(row))
+        #cur.execute(user_table_insert, list(row))
+        cur.execute(user_table_insert, row)
 
     # insert songplay records
     for index, row in df.iterrows():
@@ -75,8 +77,7 @@ def process_log_file(cur, filepath):
             songid, artistid = None, None
 
         # insert songplay record
-        # insert songplay record
-        row.userId = None  # used to insert "None" to the database when the entry is None, given that the column type is "int"
+        #row.userId = None  # used to insert "None" to the database when the entry is None, given that the column type is "int"
         songplay_data = (row.ts, row.userId, row.level, songid, artistid, row.sessionId, row.location, row.userAgent)
         cur.execute(songplay_table_insert, songplay_data)
 
